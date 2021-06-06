@@ -1,12 +1,21 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  Copyright 2021 Alex Goodwin
+ */
+
+
 package org.example;
 
 import java.util.Scanner;
 
 public class App {
+
     public static void main(String[] args){
         Scanner numbers = new Scanner(System.in);
         System.out.print("What is the users weight? ");
         String w = numbers.nextLine();
+
+        //makes sure its a numerical number
         if(!w.matches("[0-9]+")){
             while(!w.matches("[0-9]+")){
                 System.out.println("Invalid number");
@@ -25,8 +34,8 @@ public class App {
         }
         System.out.print("What is the total alcohol consumed in ounces? ");
         String a = numbers.nextLine();
-        if(!s.matches("[0-9]+")){
-            while(!s.matches("[0-9]+")){
+        if(!a.matches("[0-9]+")){
+            while(!a.matches("[0-9]+")){
                 System.out.println("Invalid number");
                 System.out.print("What is the total alcohol consumed in ounces? ");
                 a = numbers.nextLine();
@@ -34,15 +43,15 @@ public class App {
         }
         System.out.print("How long has it been since your last drink? ");
         String t = numbers.nextLine();
-        if(!s.matches("[0-9]+")){
-            while(!s.matches("[0-9]+")){
+        if(!t.matches("[0-9]+")){
+            while(!t.matches("[0-9]+")){
                 System.out.println("Invalid number");
                 System.out.print("How many hours has it been since your last drink? ");
                 t = numbers.nextLine();
             }
         }
 
-
+        //conversion
         double weight = Double.parseDouble(w);
         int sex = Integer.parseInt(s);
         double alcohol = Double.parseDouble(a);
